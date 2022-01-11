@@ -80,7 +80,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func showHorariosDisponibles(){
         
-        let currentH = arrCurrentTime[0]
+        let currentH = /*arrCurrentTime[0]*/ 8
         let currentM = arrCurrentTime[1]
         var hour = -1
         let minute = 30
@@ -98,23 +98,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 print("Comprobando Horario")
                 
                 print("Hr:", hour)
-                
-                
                 //Hora actual >= hora
                 if currentH >= hour || currentH <= 20{
                     print("Horarios disponibles")
-                    
                     //comprobar los minutos de la hora actual
                     if currentH == hour{
-                        print("Estás en el hora actual")
                         if currentM <= minute{
-                            print("Puedes seleccionar")
                             arrDisponibles.append(itemDate)
                         }else{
                             print("Estás fuera de horario")
                         }
-                    }else{
+                    }
+                    //Horarios que están disponibles
+                    else if currentH < hour{
                         arrDisponibles.append(itemDate)
+                    }else{
+                        print("Sin horarios")
                     }
                     
                 }
@@ -197,6 +196,25 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         cell.configureBackground(disponible: true)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+        
+        let arrData = arrDisponibles[indexPath.row]
+        print(arrData)
+        
+        performSegue(withIdentifier: "idDetail", sender: arrData)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "idDetail"{
+            let data = sender as! [Any]
+            let detailScreen:DetalMotocycle = segue.destination as! DetalMotocycle
+            detailScreen.data = data
+        }
     }
 }
 
