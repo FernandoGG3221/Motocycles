@@ -10,16 +10,6 @@ import Lottie
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DataMotocicle {
     
-    func countMotocicle(_ cantidad: Int?) {
-        if let cantidad = cantidad {
-            print("Cantidad", cantidad)
-            availableMotocycles = cantidad
-            tableHorarios.reloadData()
-        }
-        
-        print("Hola")
-    }
-    
     //MARK: - Outlets
     @IBOutlet weak var tableHorarios: UITableView!
     @IBOutlet weak var lblTitlw: UILabel!
@@ -96,7 +86,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func showHorariosDisponibles(){
         
-        let currentH = /*arrCurrentTime[0]*/ 8
+        let currentH = arrCurrentTime[0]
         let currentM = arrCurrentTime[1]
         var hour = -1
         let minute = 30
@@ -134,30 +124,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     
                 }
                 
-                
-                
-                /*if currentH == hour{
-                    print("Horario actual")
-                    
-                    if currentM <= minute{
-                    print("Verificando")
-                        arrDisponibles.append(itemDate)
-                    }else{
-                        print("Este horario ya no está disponible")
-                    }
-                    
-                }else if currentH > hour{
-                    print("Horarios fuera de tiempo")
-                }else if currentH < hour && currentM <= minute{
-                    print("Horarios Disponibles")
-                    arrDisponibles.append(itemDate)
-                }else{
-                    
-                }*/
-                
             }else{
                 timeEstimated = 8 - currentH
             }
+            tableHorarios.reloadData()
         }
         
         if let timeEstimated = timeEstimated {
@@ -195,6 +165,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
         }
         showHorariosDisponibles()
+        
     }
     
     //MARK: - Actions
@@ -247,6 +218,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     //MARK: - Protocols
-    
+    func countMotocicle(_ cantidad: Int?) {
+        if let cantidad = cantidad {
+            print("Cantidad", cantidad)
+            availableMotocycles = cantidad
+            
+        }
+        tableHorarios.reloadData()
+        print("Hola")
+    }
 }
 
