@@ -8,10 +8,21 @@
 import UIKit
 import Lottie
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DataMotocicle {
+    
+    func countMotocicle(_ cantidad: Int?) {
+        if let cantidad = cantidad {
+            print("Cantidad", cantidad)
+            availableMotocycles = cantidad
+            tableHorarios.reloadData()
+        }
+        
+        print("Hola")
+    }
+    
     //MARK: - Outlets
     @IBOutlet weak var tableHorarios: UITableView!
+    @IBOutlet weak var lblTitlw: UILabel!
     
     
     //MARK: - Properties
@@ -22,6 +33,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var arrHorarios = [[Int]]()
     var arrCurrentTime = [Int]()
     var arrDisponibles = [[Int]]()
+    var availableMotocycles:Int?
     
     //MARK: - DIDLOAD
     override func viewDidLoad() {
@@ -31,6 +43,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         setDataHorarios()
         configureTable()
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
     }
 
     // MARK: - Animation Functions
@@ -194,7 +210,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         cell.configureCell(arrTime: arrDisponibles[index])
         
-        cell.configureBackground(disponible: true)
+        //print(availableMotocycles)
+        if let availableMotocycles = availableMotocycles {
+            print(availableMotocycles)
+            
+            if availableMotocycles == 3{
+                print("No hay motociclistas disponibles")
+                cell.configureBackground(disponible: false)
+            }else{
+                print("motociclistas disponibles")
+                cell.configureBackground(disponible: true)
+            }
+        }
+        //cell.configureBackground(disponible: true)
         return cell
     }
     
@@ -205,7 +233,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         print(arrData)
         
         performSegue(withIdentifier: "idDetail", sender: arrData)
-        
+        //navigationController?.popViewController(animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -214,7 +242,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let data = sender as! [Any]
             let detailScreen:DetalMotocycle = segue.destination as! DetalMotocycle
             detailScreen.data = data
+            detailScreen.delegate = self
         }
     }
+    
+    //MARK: - Protocols
+    
 }
 

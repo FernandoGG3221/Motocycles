@@ -11,6 +11,7 @@ class DetalMotocycle: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     //MARK: - Outlets
     @IBOutlet weak var colecctionMotociclesView: UICollectionView!
+    @IBOutlet weak var btnAccept: UIButton!
     
     //MARK: - Properties
     var delegate:DataMotocicle?
@@ -20,18 +21,18 @@ class DetalMotocycle: UIViewController, UICollectionViewDelegate, UICollectionVi
     var fer: Motocycle = Motocycle.init(nombre: "Fercho", apellido: "González", estado: true)
     var arrPersons:[[Any]]?
     var arrData = [Any]()
-    var statusGlobal = true
-    var touch = false
+    var availableMotocycle = 0
+    
+    //MARK: - Cicle Life Screen
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        //navigationController?.navigationBar.isHidden = true
+        navigationController?.navigationBar.isHidden = true
         configureCollection()
         recoveryInfo()
         //changeValueFer()
-        
-        recoveryDataMotocicle()
+        configureBtn()
     }
     
     //MARK: - ConfigureColecctionView
@@ -68,7 +69,7 @@ class DetalMotocycle: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         
         //print(arrData)
-        print(arrPersons)
+        //print(arrPersons)
         //statusItem(index: 0)
     }
     
@@ -125,16 +126,20 @@ class DetalMotocycle: UIViewController, UICollectionViewDelegate, UICollectionVi
             changeValueFernando1()
         }
         
+
         cell.changeColorBG(status: data[1] as! Bool)
         
         collectionView.reloadData()
+
     }
     
     func changeValueFer(){
         if fer.estado == true{
             fer.estado = false
+            availableMotocycle += 1
         }else{
             fer.estado = true
+            availableMotocycle -= 1
         }
         
         recoveryInfo()
@@ -143,8 +148,10 @@ class DetalMotocycle: UIViewController, UICollectionViewDelegate, UICollectionVi
     func changeValueFernando(){
         if fernando.estado == true{
             fernando.estado = false
+            availableMotocycle += 1
         }else{
             fernando.estado = true
+            availableMotocycle -= 1
         }
         
         recoveryInfo()
@@ -153,27 +160,32 @@ class DetalMotocycle: UIViewController, UICollectionViewDelegate, UICollectionVi
     func changeValueFernando1(){
         if fernando1.estado == true{
             fernando1.estado = false
+            availableMotocycle += 1
         }else{
             fernando1.estado = true
+            availableMotocycle -= 1
         }
         
         recoveryInfo()
 
     }
     
-    func recoveryDataMotocicle(/*index:Int*/){
-        
-        for i in arrPersons![0]{
-            for j in [i]{
-                var temp = j as! Motocycle
-                if let estado = temp.estado{
-                    temp.estado = false
-                    
-                }
-                recoveryInfo()
-            }
-            print(arrPersons!)
+    func recoveryDataMotocicle(){
+        print(availableMotocycle)
+        if availableMotocycle != 0{
+            print("difernete de 0")
         }
+        delegate?.countMotocicle(availableMotocycle)
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func configureBtn(){
+        btnAccept.layer.cornerRadius = 20
+    }
+    
+    @IBAction func btnAccept(_ sender: UIButton) {
+        recoveryDataMotocicle()
         
     }
+    
 }
