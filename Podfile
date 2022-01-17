@@ -6,6 +6,7 @@ target 'Motocycles' do
   use_frameworks!
 
   # Pods for Motocycles
-	pod 'lottie-ios'	
+	pod 'lottie-ios'
+	pod 'iCarousel'	
 	
 end

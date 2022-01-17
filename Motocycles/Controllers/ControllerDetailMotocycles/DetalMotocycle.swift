@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetalMotocycle: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class DetalMotocycle: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout  {
 
     //MARK: - Outlets
     @IBOutlet weak var colecctionMotociclesView: UICollectionView!
@@ -38,6 +38,10 @@ class DetalMotocycle: UIViewController, UICollectionViewDelegate, UICollectionVi
     //MARK: - ConfigureColecctionView
     
     func configureCollection(){
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: 150, height: 150)
+        colecctionMotociclesView.collectionViewLayout = layout
         colecctionMotociclesView.delegate = self
         colecctionMotociclesView.dataSource = self
         colecctionMotociclesView.register(itemMotocycle.nib(), forCellWithReuseIdentifier: itemMotocycle.idItem)
@@ -74,6 +78,11 @@ class DetalMotocycle: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     // MARK: - CollectionView
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 150, height: 150)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return arrData.count
     }

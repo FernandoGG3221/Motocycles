@@ -13,6 +13,12 @@
 		C16F3334278A1FC100055FCC /* protocolMotocycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16F3333278A1FC100055FCC /* protocolMotocycle.swift */; };
 		C16F3339278A34B100055FCC /* itemMotocycle.xib in Resources */ = {isa = PBXBuildFile; fileRef = C16F3337278A34B100055FCC /* itemMotocycle.xib */; };
 		C16F333E278A35C200055FCC /* itemMotocycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16F333D278A35C200055FCC /* itemMotocycle.swift */; };
+		C1D4E89D2790D52B00C6C5BB /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D4E89C2790D52B00C6C5BB /* WelcomeController.swift */; };
+		C1D4E8A22790E34100C6C5BB /* moneyStack.json in Resources */ = {isa = PBXBuildFile; fileRef = C1D4E89F2790E34100C6C5BB /* moneyStack.json */; };
+		C1D4E8A32790E34100C6C5BB /* motorcycleLoading.json in Resources */ = {isa = PBXBuildFile; fileRef = C1D4E8A02790E34100C6C5BB /* motorcycleLoading.json */; };
+		C1D4E8A42790E34100C6C5BB /* particleWave.json in Resources */ = {isa = PBXBuildFile; fileRef = C1D4E8A12790E34100C6C5BB /* particleWave.json */; };
+		C1D4E8A62790E34C00C6C5BB /* voodoobikersMotorcycle.json in Resources */ = {isa = PBXBuildFile; fileRef = C1D4E8A52790E34C00C6C5BB /* voodoobikersMotorcycle.json */; };
+		C1D4E8AA27937D5F00C6C5BB /* ModelWelcomeLotties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D4E8A927937D5F00C6C5BB /* ModelWelcomeLotties.swift */; };
 		C1FFA1152787929B00921A47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FFA1142787929B00921A47 /* AppDelegate.swift */; };
 		C1FFA1172787929B00921A47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FFA1162787929B00921A47 /* SceneDelegate.swift */; };
 		C1FFA1192787929B00921A47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FFA1182787929B00921A47 /* ViewController.swift */; };
@@ -40,6 +46,12 @@
 		C16F3333278A1FC100055FCC /* protocolMotocycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protocolMotocycle.swift; sourceTree = "<group>"; };
 		C16F3337278A34B100055FCC /* itemMotocycle.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = itemMotocycle.xib; sourceTree = "<group>"; };
 		C16F333D278A35C200055FCC /* itemMotocycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemMotocycle.swift; sourceTree = "<group>"; };
+		C1D4E89C2790D52B00C6C5BB /* WelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
+		C1D4E89F2790E34100C6C5BB /* moneyStack.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = moneyStack.json; sourceTree = "<group>"; };
+		C1D4E8A02790E34100C6C5BB /* motorcycleLoading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = motorcycleLoading.json; sourceTree = "<group>"; };
+		C1D4E8A12790E34100C6C5BB /* particleWave.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = particleWave.json; sourceTree = "<group>"; };
+		C1D4E8A52790E34C00C6C5BB /* voodoobikersMotorcycle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = voodoobikersMotorcycle.json; sourceTree = "<group>"; };
+		C1D4E8A927937D5F00C6C5BB /* ModelWelcomeLotties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelWelcomeLotties.swift; sourceTree = "<group>"; };
 		C1FFA1112787929B00921A47 /* Motocycles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Motocycles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1FFA1142787929B00921A47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1FFA1162787929B00921A47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,7 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				C16F3337278A34B100055FCC /* itemMotocycle.xib */,
-				C16F333D278A35C200055FCC /* itemMotocycle.swift */,
 			);
 			path = CollectionMotocycles;
 			sourceTree = "<group>";
@@ -149,6 +160,40 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		C1D4E89B2790D4F900C6C5BB /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				C1D4E89C2790D52B00C6C5BB /* WelcomeController.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		C1D4E89E2790DAFA00C6C5BB /* itemMotocycles */ = {
+			isa = PBXGroup;
+			children = (
+				C16F333D278A35C200055FCC /* itemMotocycle.swift */,
+			);
+			path = itemMotocycles;
+			sourceTree = "<group>";
+		};
+		C1D4E8A727937CDB00C6C5BB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C1D4E8A827937D2F00C6C5BB /* ModelWelcomeLotties */,
+				C1FFA1342788C84D00921A47 /* ModelAnimation */,
+				C16F332C278A1CB100055FCC /* ModelMotocycles */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C1D4E8A827937D2F00C6C5BB /* ModelWelcomeLotties */ = {
+			isa = PBXGroup;
+			children = (
+				C1D4E8A927937D5F00C6C5BB /* ModelWelcomeLotties.swift */,
+			);
+			path = ModelWelcomeLotties;
+			sourceTree = "<group>";
+		};
 		C1FFA1082787929B00921A47 = {
 			isa = PBXGroup;
 			children = (
@@ -170,8 +215,6 @@
 		C1FFA1132787929B00921A47 /* Motocycles */ = {
 			isa = PBXGroup;
 			children = (
-				C16F333B278A34F000055FCC /* Delegate */,
-				C16F3332278A1FA000055FCC /* Protocols */,
 				C1FFA1332788C84200921A47 /* Models */,
 				C1FFA13B2788E81700921A47 /* Views */,
 				C1FFA13A2788E7FF00921A47 /* Controllers */,
@@ -183,6 +226,10 @@
 		C1FFA1282787994F00921A47 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				C1D4E89F2790E34100C6C5BB /* moneyStack.json */,
+				C1D4E8A52790E34C00C6C5BB /* voodoobikersMotorcycle.json */,
+				C1D4E8A02790E34100C6C5BB /* motorcycleLoading.json */,
+				C1D4E8A12790E34100C6C5BB /* particleWave.json */,
 				C1FFA11D2787929B00921A47 /* Assets.xcassets */,
 				C1FFA1292787996900921A47 /* 404ErrorAnimation.json */,
 				C1FFA12D2787996900921A47 /* addlandHeatfavV2.json */,
@@ -196,9 +243,9 @@
 		C1FFA1332788C84200921A47 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C16F332C278A1CB100055FCC /* ModelMotocycles */,
+				C1D4E8A727937CDB00C6C5BB /* Models */,
+				C16F3332278A1FA000055FCC /* Protocols */,
 				C1FFA1282787994F00921A47 /* Assets */,
-				C1FFA1342788C84D00921A47 /* ModelAnimation */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -222,6 +269,9 @@
 		C1FFA13A2788E7FF00921A47 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C1D4E89E2790DAFA00C6C5BB /* itemMotocycles */,
+				C16F333B278A34F000055FCC /* Delegate */,
+				C1D4E89B2790D4F900C6C5BB /* Welcome */,
 				C16F333A278A34D600055FCC /* Main */,
 				C16F332F278A1ECF00055FCC /* ControllerDetailMotocycles */,
 				C1FFA1432789713A00921A47 /* itemHorarios */,
@@ -317,14 +367,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1FFA12F2787996900921A47 /* starInHandBabyAstronaut.json in Resources */,
+				C1D4E8A22790E34100C6C5BB /* moneyStack.json in Resources */,
 				C1FFA1302787996900921A47 /* graphDiagramAnimation.json in Resources */,
 				C1FFA12E2787996900921A47 /* 404ErrorAnimation.json in Resources */,
+				C1D4E8A42790E34100C6C5BB /* particleWave.json in Resources */,
 				C1FFA1422789712F00921A47 /* itemHorario.xib in Resources */,
+				C1D4E8A32790E34100C6C5BB /* motorcycleLoading.json in Resources */,
 				C1FFA1212787929B00921A47 /* LaunchScreen.storyboard in Resources */,
 				C1FFA1322787996900921A47 /* addlandHeatfavV2.json in Resources */,
 				C16F3339278A34B100055FCC /* itemMotocycle.xib in Resources */,
 				C1FFA1312787996900921A47 /* loadingCircles.json in Resources */,
 				C1FFA11E2787929B00921A47 /* Assets.xcassets in Resources */,
+				C1D4E8A62790E34C00C6C5BB /* voodoobikersMotorcycle.json in Resources */,
 				C1FFA11C2787929B00921A47 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,8 +438,10 @@
 				C16F333E278A35C200055FCC /* itemMotocycle.swift in Sources */,
 				C1FFA1392788D13100921A47 /* FunctionsAnimations.swift in Sources */,
 				C16F332E278A1CF200055FCC /* ModelMotocycles.swift in Sources */,
+				C1D4E89D2790D52B00C6C5BB /* WelcomeController.swift in Sources */,
 				C16F3334278A1FC100055FCC /* protocolMotocycle.swift in Sources */,
 				C1FFA13D2788E85800921A47 /* LaunchScreen.swift in Sources */,
+				C1D4E8AA27937D5F00C6C5BB /* ModelWelcomeLotties.swift in Sources */,
 				C1FFA1192787929B00921A47 /* ViewController.swift in Sources */,
 				C1FFA1152787929B00921A47 /* AppDelegate.swift in Sources */,
 				C1FFA1172787929B00921A47 /* SceneDelegate.swift in Sources */,
