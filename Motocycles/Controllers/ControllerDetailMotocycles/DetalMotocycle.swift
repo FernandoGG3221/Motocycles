@@ -19,6 +19,16 @@ class DetalMotocycle: UIViewController, UICollectionViewDelegate, UICollectionVi
     var fernando:Motocycle = Motocycle.init(nombre: "Fernando", apellido: "González", estado: true)
     var fernando1:Motocycle = Motocycle.init(nombre: "Fer", apellido: "González", estado: true)
     var fer: Motocycle = Motocycle.init(nombre: "Fercho", apellido: "González", estado: true)
+    var alfredo = Motocycle.init(nombre: "Alfredo", apellido: "Alonso", estado: true)
+    var anastacio = Motocycle.init(nombre: "Anastacio", apellido: "Alejo", estado: true)
+    var brenda = Motocycle.init(nombre:  "Brenda", apellido: "Aguayo", estado: true)
+    var anayeli = Motocycle.init(nombre: "Anayeli", apellido: "Aventura", estado: true)
+    var angelica = Motocycle.init(nombre: "Angélica", apellido: "Asunción",estado: true)
+    var cristian = Motocycle.init(nombre: "Cristian", apellido: "Carcamo", estado: true)
+    var carlos = Motocycle.init(nombre: "Carlos", apellido: "Camarena", estado: true)
+    var diana = Motocycle.init(nombre: "Diana", apellido: "Dominguez", estado: true)
+    
+    
     var arrPersons:[[Any]]?
     var arrData = [Any]()
     var availableMotocycle = 0
@@ -55,6 +65,15 @@ class DetalMotocycle: UIViewController, UICollectionViewDelegate, UICollectionVi
             [fer.nombre!, fer.estado!],
             [fernando.nombre!, fernando.estado!],
             [fernando1.nombre!, fernando1.estado!]
+            //[alfredo.nombre!, alfredo.estado!],
+            //[anastacio.nombre!, anastacio.estado!],
+            //[brenda.nombre!, brenda.estado!],
+            //[anayeli.nombre!, anayeli.estado!],
+            //[angelica.nombre!, angelica.estado!],
+            //[cristian.nombre!, cristian.estado!],
+            //[carlos.nombre!, carlos.estado!],
+            //[diana.nombre!, diana.estado!]
+            
         ]
         
         /*if let ferP = fer.nombre{
@@ -184,7 +203,7 @@ class DetalMotocycle: UIViewController, UICollectionViewDelegate, UICollectionVi
         if availableMotocycle != 0{
             print("difernete de 0")
         }
-        delegate?.countMotocicle(availableMotocycle)
+        delegate?.countMotocicle([availableMotocycle, data!])
         navigationController?.popViewController(animated: true)
     }
     

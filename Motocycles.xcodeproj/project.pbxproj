@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		3B08EF0955EB6F01C8A544A6 /* Pods_Motocycles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D156004F4AAA6A7FB1F2AF2 /* Pods_Motocycles.framework */; };
+		C1534BD927968DA400806579 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1534BD827968DA400806579 /* OnboardingView.swift */; };
+		C1534BDC2796942F00806579 /* ModelOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1534BDB2796942F00806579 /* ModelOnboarding.swift */; };
+		C1534BE32797506A00806579 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1534BE12797506A00806579 /* OnboardingCollectionViewCell.swift */; };
+		C1534BE42797506A00806579 /* OnboardingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1534BE22797506A00806579 /* OnboardingCollectionViewCell.xib */; };
+		C1534BE82797C0E600806579 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1534BE72797C0E600806579 /* Core.swift */; };
 		C16F332E278A1CF200055FCC /* ModelMotocycles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16F332D278A1CF200055FCC /* ModelMotocycles.swift */; };
 		C16F3331278A1F1000055FCC /* DetalMotocycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16F3330278A1F1000055FCC /* DetalMotocycle.swift */; };
 		C16F3334278A1FC100055FCC /* protocolMotocycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16F3333278A1FC100055FCC /* protocolMotocycle.swift */; };
@@ -41,6 +46,11 @@
 		3D156004F4AAA6A7FB1F2AF2 /* Pods_Motocycles.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Motocycles.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BA466167BBA6EB7C9419DD8 /* Pods-Motocycles.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Motocycles.release.xcconfig"; path = "Target Support Files/Pods-Motocycles/Pods-Motocycles.release.xcconfig"; sourceTree = "<group>"; };
 		AA5CE53BFB9789C7FF1E0075 /* Pods-Motocycles.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Motocycles.debug.xcconfig"; path = "Target Support Files/Pods-Motocycles/Pods-Motocycles.debug.xcconfig"; sourceTree = "<group>"; };
+		C1534BD827968DA400806579 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		C1534BDB2796942F00806579 /* ModelOnboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelOnboarding.swift; sourceTree = "<group>"; };
+		C1534BE12797506A00806579 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		C1534BE22797506A00806579 /* OnboardingCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingCollectionViewCell.xib; sourceTree = "<group>"; };
+		C1534BE72797C0E600806579 /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
 		C16F332D278A1CF200055FCC /* ModelMotocycles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelMotocycles.swift; sourceTree = "<group>"; };
 		C16F3330278A1F1000055FCC /* DetalMotocycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalMotocycle.swift; sourceTree = "<group>"; };
 		C16F3333278A1FC100055FCC /* protocolMotocycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protocolMotocycle.swift; sourceTree = "<group>"; };
@@ -99,6 +109,55 @@
 				4BA466167BBA6EB7C9419DD8 /* Pods-Motocycles.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C1534BD727968D5C00806579 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				C1534BDF2796990000806579 /* CollectionView */,
+				C1534BD827968DA400806579 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		C1534BDA2796941000806579 /* ModelOnboarding */ = {
+			isa = PBXGroup;
+			children = (
+				C1534BDB2796942F00806579 /* ModelOnboarding.swift */,
+			);
+			path = ModelOnboarding;
+			sourceTree = "<group>";
+		};
+		C1534BDF2796990000806579 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				C1534BE12797506A00806579 /* OnboardingCollectionViewCell.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		C1534BE02797504400806579 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				C1534BE22797506A00806579 /* OnboardingCollectionViewCell.xib */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		C1534BE52797C0CF00806579 /* Adapters */ = {
+			isa = PBXGroup;
+			children = (
+				C1534BE62797C0D500806579 /* Core */,
+			);
+			path = Adapters;
+			sourceTree = "<group>";
+		};
+		C1534BE62797C0D500806579 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C1534BE72797C0E600806579 /* Core.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		C16F332C278A1CB100055FCC /* ModelMotocycles */ = {
@@ -179,6 +238,7 @@
 		C1D4E8A727937CDB00C6C5BB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C1534BDA2796941000806579 /* ModelOnboarding */,
 				C1D4E8A827937D2F00C6C5BB /* ModelWelcomeLotties */,
 				C1FFA1342788C84D00921A47 /* ModelAnimation */,
 				C16F332C278A1CB100055FCC /* ModelMotocycles */,
@@ -215,6 +275,7 @@
 		C1FFA1132787929B00921A47 /* Motocycles */ = {
 			isa = PBXGroup;
 			children = (
+				C1534BE52797C0CF00806579 /* Adapters */,
 				C1FFA1332788C84200921A47 /* Models */,
 				C1FFA13B2788E81700921A47 /* Views */,
 				C1FFA13A2788E7FF00921A47 /* Controllers */,
@@ -269,6 +330,7 @@
 		C1FFA13A2788E7FF00921A47 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C1534BD727968D5C00806579 /* Onboarding */,
 				C1D4E89E2790DAFA00C6C5BB /* itemMotocycles */,
 				C16F333B278A34F000055FCC /* Delegate */,
 				C1D4E89B2790D4F900C6C5BB /* Welcome */,
@@ -283,6 +345,7 @@
 		C1FFA13B2788E81700921A47 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C1534BE02797504400806579 /* Onboarding */,
 				C16F333C278A350900055FCC /* Main */,
 				C16F3335278A347B00055FCC /* CollectionMotocycles */,
 				C1FFA13E278970F100921A47 /* TableHorarios */,
@@ -380,6 +443,7 @@
 				C1FFA11E2787929B00921A47 /* Assets.xcassets in Resources */,
 				C1D4E8A62790E34C00C6C5BB /* voodoobikersMotorcycle.json in Resources */,
 				C1FFA11C2787929B00921A47 /* Main.storyboard in Resources */,
+				C1534BE42797506A00806579 /* OnboardingCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,16 +499,20 @@
 				C16F3331278A1F1000055FCC /* DetalMotocycle.swift in Sources */,
 				C1FFA1412789712F00921A47 /* itemHorario.swift in Sources */,
 				C1FFA1362788C88100921A47 /* modelAnimations.swift in Sources */,
+				C1534BE32797506A00806579 /* OnboardingCollectionViewCell.swift in Sources */,
 				C16F333E278A35C200055FCC /* itemMotocycle.swift in Sources */,
 				C1FFA1392788D13100921A47 /* FunctionsAnimations.swift in Sources */,
 				C16F332E278A1CF200055FCC /* ModelMotocycles.swift in Sources */,
 				C1D4E89D2790D52B00C6C5BB /* WelcomeController.swift in Sources */,
 				C16F3334278A1FC100055FCC /* protocolMotocycle.swift in Sources */,
 				C1FFA13D2788E85800921A47 /* LaunchScreen.swift in Sources */,
+				C1534BDC2796942F00806579 /* ModelOnboarding.swift in Sources */,
 				C1D4E8AA27937D5F00C6C5BB /* ModelWelcomeLotties.swift in Sources */,
 				C1FFA1192787929B00921A47 /* ViewController.swift in Sources */,
+				C1534BE82797C0E600806579 /* Core.swift in Sources */,
 				C1FFA1152787929B00921A47 /* AppDelegate.swift in Sources */,
 				C1FFA1172787929B00921A47 /* SceneDelegate.swift in Sources */,
+				C1534BD927968DA400806579 /* OnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,6 +24,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var arrCurrentTime = [Int]()
     var arrDisponibles = [[Int]]()
     var availableMotocycles:Int?
+    var arrMotocycles = [[Any]]()
+    var timeSelect:[Int]?
     
     //MARK: - DIDLOAD
     override func viewDidLoad() {
@@ -32,7 +34,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         getTime()
         setDataHorarios()
         configureTable()
-        
+        createMotocyclesAvailable()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -86,7 +88,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func showHorariosDisponibles(){
         
-        let currentH = arrCurrentTime[0]
+        let currentH = /*arrCurrentTime[0]*/ 8
         let currentM = arrCurrentTime[1]
         var hour = -1
         let minute = 30
@@ -168,6 +170,33 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
+    //MARK: - Motocycles
+    //Remplazar por un servicio web
+    func createMotocyclesAvailable(){
+        
+    }
+    
+    func recoveryInfoMotocycles(){
+        
+    }
+    
+    
+    func changeStatusMotocycle(name:Motocycle?){
+        print("Soy",name!)
+        if name!.estado == true{
+            print("El estado del motociclcista es:", name!.estado!)
+            var name = name!
+            name.estado = false
+            recoveryInfoMotocycles()
+            
+        }else if name!.estado == false{
+            print("El estado del motociclcista es:", name!.estado!)
+            var name = name!
+            name.estado = true
+            recoveryInfoMotocycles()
+        }
+    }
+    
     //MARK: - Actions
     
     //MARK: - Table
@@ -181,18 +210,37 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         cell.configureCell(arrTime: arrDisponibles[index])
         
-        //print(availableMotocycles)
-        if let availableMotocycles = availableMotocycles {
-            print(availableMotocycles)
-            
-            if availableMotocycles == 3{
-                print("No hay motociclistas disponibles")
-                cell.configureBackground(disponible: false)
-            }else{
-                print("motociclistas disponibles")
-                cell.configureBackground(disponible: true)
+        
+        if let timeSelect = timeSelect {
+            print("\nHola mundo")
+            print(timeSelect)
+            for i in arrDisponibles{
+                print("i",i)
+                
+                if timeSelect == i{
+                    print("Encontré la hora exacta")
+                    
+                    if let availableMotocycles = availableMotocycles {
+                        print(availableMotocycles)
+                        
+                        if availableMotocycles == 3{
+                            print("No hay motociclistas disponibles")
+                            cell.configureBackground(disponible: false)
+                        }else{
+                            print("motociclistas disponibles")
+                            cell.configureBackground(disponible: true)
+                        }
+                    }
+                    
+                }
+                
             }
+        }else{
+            print("Sin datos")
         }
+        
+        //print(availableMotocycles)
+        
         //cell.configureBackground(disponible: true)
         return cell
     }
@@ -201,7 +249,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         print(indexPath.row)
         
         let arrData = arrDisponibles[indexPath.row]
-        print(arrData)
+        print("Enviando datos",arrData)
         
         performSegue(withIdentifier: "idDetail", sender: arrData)
         //navigationController?.popViewController(animated: true)
@@ -218,14 +266,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     //MARK: - Protocols
-    func countMotocicle(_ cantidad: Int?) {
-        if let cantidad = cantidad {
+    func countMotocicle(_ data:[Any]){
+       
+        let cantidad = data[0] as! Int
+        let horarioSeleccionado = data[1]
+        
+        print("Cantidad",cantidad)
+        availableMotocycles = cantidad
+        print("Horario Seleccionado",horarioSeleccionado)
+        timeSelect = (horarioSeleccionado as! [Int])
+        tableHorarios.reloadData()
+        
+        /*if let cantidad = cantidad {
             print("Cantidad", cantidad)
             availableMotocycles = cantidad
             
         }
         tableHorarios.reloadData()
-        print("Hola")
+        print("Hola")*/
     }
 }
 

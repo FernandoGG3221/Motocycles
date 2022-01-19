@@ -8,5 +8,5 @@
 import Foundation
 
 protocol DataMotocicle{
-    func countMotocicle(_ cantidad:Int?)
+    func countMotocicle(_ data:[Any])
 }
