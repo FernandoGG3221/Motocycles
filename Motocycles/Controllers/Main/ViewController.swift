@@ -27,7 +27,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var arrMotocycles = [[Any]]()
     var timeSelect:[Int]?
     
-    //MARK: - DIDLOAD
+    //MARK: - Cycle Life
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -35,6 +35,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         setDataHorarios()
         configureTable()
         createMotocyclesAvailable()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if Core.shared.isNewUser() == false{
+            //Show Onboarding
+            print("Es un nuevo usuario")
+            let vc = storyboard?.instantiateViewController(withIdentifier: "inOnboardingVC") as! OnboardingView
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true, completion: nil)
+        }else if Core.shared.isNewUser() == true {
+            print("No es un nuevo usuario")
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

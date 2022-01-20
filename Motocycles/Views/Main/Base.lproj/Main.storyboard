@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="esr-iw-TJq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T7v-RT-cp0">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Motocycles" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="vcTimeAvailable" id="BYZ-38-t0r" customClass="ViewController" customModule="Motocycles" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,7 +59,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2740.579710144928" y="63.616071428571423"/>
+            <point key="canvasLocation" x="3647.826086956522" y="63.616071428571423"/>
         </scene>
         <!--Detal Motocycle-->
         <scene sceneID="By6-8z-IKw">
@@ -178,69 +178,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="chI-Yx-X81" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3624.6376811594205" y="63.616071428571423"/>
-        </scene>
-        <!--Welcome Controller-->
-        <scene sceneID="4BE-eL-cLW">
-            <objects>
-                <viewController id="W8L-bE-P6b" customClass="WelcomeController" customModule="Motocycles" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="YzK-ce-QXp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="brT-eD-yCc">
-                                <rect key="frame" x="20" y="771" width="92" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Saltar">
-                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="18"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="axi-Mp-oFs"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7vZ-T4-reg">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="642"/>
-                                <color key="backgroundColor" systemColor="systemTealColor"/>
-                            </view>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Ob9-QI-0l2">
-                                <rect key="frame" x="149" y="684" width="116" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </pageControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzp-lL-sP7">
-                                <rect key="frame" x="157" y="746" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <imageReference key="image" image="mustache" catalog="system" symbolScale="large"/>
-                                </buttonConfiguration>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="j1q-1f-gJk"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="j1q-1f-gJk" firstAttribute="trailing" secondItem="7vZ-T4-reg" secondAttribute="trailing" id="647-G9-v8S"/>
-                            <constraint firstItem="7vZ-T4-reg" firstAttribute="leading" secondItem="j1q-1f-gJk" secondAttribute="leading" id="YEe-4r-mr8"/>
-                            <constraint firstItem="7vZ-T4-reg" firstAttribute="top" secondItem="YzK-ce-QXp" secondAttribute="top" id="xTj-VJ-tZT"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="JHu-Hf-lM4"/>
-                    <connections>
-                        <outlet property="viewCarousel" destination="7vZ-T4-reg" id="D3q-o6-x84"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="E1a-aR-RX5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1876.8115942028987" y="63.616071428571423"/>
+            <point key="canvasLocation" x="4531.884057971015" y="63.616071428571423"/>
         </scene>
         <!--Onboarding View-->
         <scene sceneID="eCM-sW-1pQ">
             <objects>
-                <viewController id="esr-iw-TJq" customClass="OnboardingView" customModule="Motocycles" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="inOnboardingVC" id="esr-iw-TJq" customClass="OnboardingView" customModule="Motocycles" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cI3-Gt-Qbz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -325,30 +268,29 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7kT-1s-sAg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1876.8115942028987" y="816.96428571428567"/>
+            <point key="canvasLocation" x="1212" y="64"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="RE1-bb-s7p">
+        <scene sceneID="x3s-pt-aeA">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D33-5Y-GQH" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="T7v-RT-cp0" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eEN-YB-NbA">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RVR-3O-TFV">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="W8L-bE-P6b" kind="relationship" relationship="rootViewController" id="b9U-nS-VI7"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="EaM-d2-3jq"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SLl-Lh-SBT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yau-Cz-bmv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1053.6231884057972" y="63.616071428571423"/>
+            <point key="canvasLocation" x="2740.579710144928" y="63.616071428571423"/>
         </scene>
     </scenes>
     <resources>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
-        <image name="mustache" catalog="system" width="128" height="52"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

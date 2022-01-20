@@ -12,11 +12,15 @@ class Core{
     static let shared = Core()
     
     func isNewUser() -> Bool{
-        print()
-        return UserDefaults.standard.bool(forKey: "isNewUser")
+        let data = UserDefaults.standard.bool(forKey: "isNewUser")
+        print("\n\nUserDefault", data)
+        //print("UserDefault", !data)
+        print("\n\n")
+        return data
     }
     
     func setIsNotNewUser(){
+        
         UserDefaults.standard.set(true, forKey: "isNewUSer")
     }
     

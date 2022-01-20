@@ -18,6 +18,7 @@ class OnboardingView: UIViewController, UICollectionViewDelegate, UICollectionVi
     //MARK: - Properties
     var arrSlides:[ModelOnboarding] = []
     var currentPage = 0 {
+        
         didSet{
             pageControl.currentPage = currentPage
             if currentPage == arrSlides.count - 1{
@@ -26,6 +27,7 @@ class OnboardingView: UIViewController, UICollectionViewDelegate, UICollectionVi
                 btnOK.setImage(UIImage(systemName: "chevron.forward"), for: .normal)
             }
         }
+        
     }
     
     //MARK: - Cicle Life
@@ -35,13 +37,6 @@ class OnboardingView: UIViewController, UICollectionViewDelegate, UICollectionVi
         configurations()
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        if Core.shared.isNewUser(){
-            //Show Onboarding
-        }
-    }
 
     //MARK: - Configurations
     
@@ -102,7 +97,7 @@ class OnboardingView: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBAction func btnOk(_ sender: UIButton) {
         
         if currentPage == arrSlides.count - 1 {
-            print("Go to Next StoryBoard")
+            closeOnboarding()
         }else{
             currentPage += 1
             let indexPath = IndexPath(item: currentPage, section: 0)
@@ -113,9 +108,14 @@ class OnboardingView: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     @IBAction func btnSkipt(_ sender: UIButton) {
-        print("Go to Storyboard")
-        
+        closeOnboarding()
     }
     
+    
+    func closeOnboarding(){
+        print("Go to Storyboard")
+        Core.shared.setIsNotNewUser()
+        dismiss(animated: true, completion: nil)
+    }
     
 }
