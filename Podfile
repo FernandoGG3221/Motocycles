@@ -8,5 +8,8 @@ target 'Motocycles' do
   # Pods for Motocycles
 	pod 'lottie-ios'
 	pod 'iCarousel'	
+	pod 'Firebase/Analytics'
+	pod 'Firebase/Auth'
+	pod 'Firebase/Firestore'
 	
 end

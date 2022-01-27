@@ -40,6 +40,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
+        print("\n---------",Core.shared.isNewUser(),"-----------\n")
+        
         if Core.shared.isNewUser() == false{
             //Show Onboarding
             print("Es un nuevo usuario")
@@ -102,7 +104,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func showHorariosDisponibles(){
         
-        let currentH = /*arrCurrentTime[0]*/ 8
+        let currentH = arrCurrentTime[0]
         let currentM = arrCurrentTime[1]
         var hour = -1
         let minute = 30

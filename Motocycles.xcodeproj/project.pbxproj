@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3B08EF0955EB6F01C8A544A6 /* Pods_Motocycles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D156004F4AAA6A7FB1F2AF2 /* Pods_Motocycles.framework */; };
+		C1166A84279A1B2500ABB6D3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C1166A83279A1B2500ABB6D3 /* GoogleService-Info.plist */; };
 		C1534BD927968DA400806579 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1534BD827968DA400806579 /* OnboardingView.swift */; };
 		C1534BDC2796942F00806579 /* ModelOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1534BDB2796942F00806579 /* ModelOnboarding.swift */; };
 		C1534BE32797506A00806579 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1534BE12797506A00806579 /* OnboardingCollectionViewCell.swift */; };
@@ -46,6 +47,7 @@
 		3D156004F4AAA6A7FB1F2AF2 /* Pods_Motocycles.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Motocycles.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BA466167BBA6EB7C9419DD8 /* Pods-Motocycles.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Motocycles.release.xcconfig"; path = "Target Support Files/Pods-Motocycles/Pods-Motocycles.release.xcconfig"; sourceTree = "<group>"; };
 		AA5CE53BFB9789C7FF1E0075 /* Pods-Motocycles.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Motocycles.debug.xcconfig"; path = "Target Support Files/Pods-Motocycles/Pods-Motocycles.debug.xcconfig"; sourceTree = "<group>"; };
+		C1166A83279A1B2500ABB6D3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C1534BD827968DA400806579 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		C1534BDB2796942F00806579 /* ModelOnboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelOnboarding.swift; sourceTree = "<group>"; };
 		C1534BE12797506A00806579 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 				C1FFA13B2788E81700921A47 /* Views */,
 				C1FFA13A2788E7FF00921A47 /* Controllers */,
 				C1FFA1222787929B00921A47 /* Info.plist */,
+				C1166A83279A1B2500ABB6D3 /* GoogleService-Info.plist */,
 			);
 			path = Motocycles;
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 				C1D4E8A32790E34100C6C5BB /* motorcycleLoading.json in Resources */,
 				C1FFA1212787929B00921A47 /* LaunchScreen.storyboard in Resources */,
 				C1FFA1322787996900921A47 /* addlandHeatfavV2.json in Resources */,
+				C1166A84279A1B2500ABB6D3 /* GoogleService-Info.plist in Resources */,
 				C16F3339278A34B100055FCC /* itemMotocycle.xib in Resources */,
 				C1FFA1312787996900921A47 /* loadingCircles.json in Resources */,
 				C1FFA11E2787929B00921A47 /* Assets.xcassets in Resources */,

@@ -82,7 +82,12 @@ class OnboardingView: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionV.frame.width, height: collectionV.frame.height)
+        let width = collectionV.frame.width
+        let height = collectionV.frame.height
+        
+        print("\nw:", width, "\nh:", height)
+        
+        return CGSize(width: width, height: height)
     }
     
     //MARK: - Current Page
@@ -113,9 +118,12 @@ class OnboardingView: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     
     func closeOnboarding(){
-        print("Go to Storyboard")
+        print("\n\nGo to Storyboard")
+        print("\n------", Core.shared.setIsNotNewUser(), "---------\n") 
         Core.shared.setIsNotNewUser()
         dismiss(animated: true, completion: nil)
+        
+        
     }
     
 }
