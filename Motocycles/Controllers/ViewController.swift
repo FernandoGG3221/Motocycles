@@ -26,6 +26,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var availableMotocycles:Int?
     var arrMotocycles = [[Any]]()
     var timeSelect:[Int]?
+    var indexCell:Int?
+    var available:Bool?
     
     //MARK: - Cycle Life
     override func viewDidLoad() {
@@ -99,7 +101,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func showHorariosDisponibles(){
         
-        let currentH = arrCurrentTime[0]
+        let currentH = /*arrCurrentTime[0]*/8
         let currentM = arrCurrentTime[1]
         var hour = -1
         let minute = 30
@@ -202,13 +204,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         cell.configureCell(arrTime: arrDisponibles[index])
         
-        //pintar la celda que corresponde en el horario seleccionado
+        if indexPath.row == indexCell{
+            if let available = available {
+                cell.configureBackground(disponible: available)
+            }
+        }
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        indexCell = indexPath.row
         
         if let timeSelect = timeSelect {
             print("\nHola mundo")
             print(timeSelect)
             for i in arrDisponibles{
-                print("i",i)
                 
                 if timeSelect == i{
                     print("Encontré la hora exacta")
@@ -218,10 +230,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                         
                         if availableMotocycles == 0{
                             print("No hay motociclistas disponibles")
-                            cell.configureBackground(disponible: false)
+                            available = false
                         }else{
                             print("motociclistas disponibles")
-                            cell.configureBackground(disponible: true)
+                            available = true
                         }
                     }
                     
@@ -231,11 +243,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }else{
             print("Sin datos")
         }
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let arrData = arrDisponibles[indexPath.row]
         
@@ -263,8 +270,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         print("Horario Seleccionado",horarioSeleccionado)
         timeSelect = (horarioSeleccionado as! [Int])
+        DispatchQueue.main.async {
+            self.tableHorarios.reloadData()
+        }
         
-        tableHorarios.reloadData()
         
     }
 }

@@ -19,23 +19,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horarios disponibles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2z-k0-wcW">
-                                <rect key="frame" x="16" y="98" width="382" height="36"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5Mo-cV-xjv">
-                                <rect key="frame" x="19" y="150" width="375" height="712"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5Mo-cV-xjv">
+                                <rect key="frame" x="19" y="134" width="375" height="742"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <color key="sectionIndexBackgroundColor" systemColor="labelColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="2" indentationWidth="0.0" reuseIdentifier="idCellHorarios" focusStyle="custom" rowHeight="63" id="USd-iM-gEb">
-                                        <rect key="frame" x="0.0" y="44.5" width="375" height="63"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="374" height="63"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="USd-iM-gEb" id="01a-mG-QJu">
-                                            <rect key="frame" x="0.0" y="0.0" width="346.5" height="63"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="345.5" height="63"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -45,9 +44,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="u2z-k0-wcW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="IRK-hy-SBW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u2z-k0-wcW" secondAttribute="trailing" constant="16" id="ooU-kn-c0X"/>
-                            <constraint firstItem="u2z-k0-wcW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="r9i-VA-hf1"/>
+                            <constraint firstItem="u2z-k0-wcW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HBv-t0-RhI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Mo-cV-xjv" secondAttribute="trailing" constant="20" id="WIB-Mc-prP"/>
+                            <constraint firstAttribute="bottom" secondItem="5Mo-cV-xjv" secondAttribute="bottom" constant="20" id="bfj-Nx-bzo"/>
+                            <constraint firstItem="u2z-k0-wcW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fZE-44-9qy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u2z-k0-wcW" secondAttribute="trailing" id="ftC-cF-aL3"/>
+                            <constraint firstItem="5Mo-cV-xjv" firstAttribute="top" secondItem="u2z-k0-wcW" secondAttribute="bottom" constant="10" id="pfE-5u-kk2"/>
+                            <constraint firstItem="5Mo-cV-xjv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qpC-1K-PHG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xTe-LP-4y4"/>

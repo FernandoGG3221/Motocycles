@@ -85,8 +85,6 @@ class OnboardingView: UIViewController, UICollectionViewDelegate, UICollectionVi
         let width = collectionV.frame.width
         let height = collectionV.frame.height
         
-        print("\nw:", width, "\nh:", height)
-        
         return CGSize(width: width, height: height)
     }
     

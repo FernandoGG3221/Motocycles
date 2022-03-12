@@ -105,11 +105,7 @@ class DetalMotocycle: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func recoveryDataMotocicle(){
-        
-        print("aailable: ---",availableMotocycle)
-        if availableMotocycle != 0{
-            print("Diferente de 0")
-        }
+        //Usando el patrón de delegados para enviar datos a otro storyboard
         delegate?.countMotocicle([availableMotocycle, data!])
         navigationController?.popViewController(animated: true)
     }
