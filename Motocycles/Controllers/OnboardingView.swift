@@ -118,11 +118,9 @@ class OnboardingView: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     
     func closeOnboarding(){
-        print("\n\nGo to Storyboard")
-        print("\n------", Core.shared.setIsNotNewUser(), "---------\n") 
+         
         Core.shared.setIsNotNewUser()
         dismiss(animated: true, completion: nil)
-        
         
     }
     
