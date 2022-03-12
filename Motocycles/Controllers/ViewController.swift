@@ -40,16 +40,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        print("\n---------",Core.shared.isNewUser(),"-----------\n")
-        
         if Core.shared.isNewUser() == false{
             //Show Onboarding
-            print("Es un nuevo usuario")
             let vc = storyboard?.instantiateViewController(withIdentifier: "inOnboardingVC") as! OnboardingView
             vc.modalPresentationStyle = .fullScreen
             present(vc, animated: true, completion: nil)
-        }else if Core.shared.isNewUser() == true {
-            print("No es un nuevo usuario")
         }
     }
     
@@ -66,8 +61,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if let animationView = animationView {
             view.addSubview(animationView)
             animationView.play()
-        }else{
-            print("Not found animation404Error")
         }
         
         closeAnimation()
@@ -95,11 +88,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     //MARK: - Validate Time now
     func getTime(){
-        let date = Date()
-        let calendar = Calendar.current
-        let hour = calendar.component(.hour, from: date)
-        let minute = calendar.component(.minute, from: date)
-        arrCurrentTime = [hour, minute]
+        
+            let date = Date()
+            let calendar = Calendar.current
+            let hour = calendar.component(.hour, from: date)
+            let minute = calendar.component(.minute, from: date)
+            self.arrCurrentTime = [hour, minute]
+        
     }
     
     func showHorariosDisponibles(){
@@ -116,28 +111,30 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
             hour = itemDate[0]
             
+            
+            
             if currentH > hour && currentM > minute{
                 print("Te encuentras fuera de horario")
             }else if currentH <= 20 && currentH >= 8{
-                print("Comprobando Horario")
+                //print("Comprobando Horario")
                 
-                print("Hr:", hour)
+                //print("Hr:", hour)
                 //Hora actual >= hora
                 if currentH >= hour || currentH <= 20{
-                    print("Horarios disponibles")
+                    //print("Horarios disponibles")
                     //comprobar los minutos de la hora actual
                     if currentH == hour{
                         if currentM <= minute{
                             arrDisponibles.append(itemDate)
                         }else{
-                            print("Estás fuera de horario")
+                            //print("Estás fuera de horario")
                         }
                     }
                     //Horarios que están disponibles
                     else if currentH < hour{
                         arrDisponibles.append(itemDate)
                     }else{
-                        print("Sin horarios")
+                        //print("Sin horarios")
                     }
                     
                 }
@@ -192,27 +189,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
-    func recoveryInfoMotocycles(){
-        
-    }
-    
-    
-    func changeStatusMotocycle(name:Motocycle?){
-        print("Soy",name!)
-        if name!.estado == true{
-            print("El estado del motociclcista es:", name!.estado!)
-            var name = name!
-            name.estado = false
-            recoveryInfoMotocycles()
-            
-        }else if name!.estado == false{
-            print("El estado del motociclcista es:", name!.estado!)
-            var name = name!
-            name.estado = true
-            recoveryInfoMotocycles()
-        }
-    }
-    
     //MARK: - Actions
     
     //MARK: - Table
@@ -226,6 +202,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         cell.configureCell(arrTime: arrDisponibles[index])
         
+        //pintar la celda que corresponde en el horario seleccionado
         
         if let timeSelect = timeSelect {
             print("\nHola mundo")
@@ -239,7 +216,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     if let availableMotocycles = availableMotocycles {
                         print(availableMotocycles)
                         
-                        if availableMotocycles == 3{
+                        if availableMotocycles == 0{
                             print("No hay motociclistas disponibles")
                             cell.configureBackground(disponible: false)
                         }else{
@@ -255,20 +232,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             print("Sin datos")
         }
         
-        //print(availableMotocycles)
-        
-        //cell.configureBackground(disponible: true)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
         
         let arrData = arrDisponibles[indexPath.row]
-        print("Enviando datos",arrData)
         
         performSegue(withIdentifier: "idDetail", sender: arrData)
-        //navigationController?.popViewController(animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -289,17 +260,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         print("Cantidad",cantidad)
         availableMotocycles = cantidad
+        
         print("Horario Seleccionado",horarioSeleccionado)
         timeSelect = (horarioSeleccionado as! [Int])
+        
         tableHorarios.reloadData()
         
-        /*if let cantidad = cantidad {
-            print("Cantidad", cantidad)
-            availableMotocycles = cantidad
-            
-        }
-        tableHorarios.reloadData()
-        print("Hola")*/
     }
 }
 

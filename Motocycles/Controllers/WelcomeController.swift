@@ -36,10 +36,7 @@ class WelcomeController: UIViewController, iCarouselDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configureCarousel()
-        addLottiesArray()
-        
     }
     
     //MARK: - Carousel
@@ -53,18 +50,10 @@ class WelcomeController: UIViewController, iCarouselDataSource {
                                     width: viewCarousel.frame.size.width - 22,
                                     height: viewCarousel.frame.size.height)
         
-        print("Configurando carusel")
-    }
-
-    func addLottiesArray(){
-        
     }
     
     func loadArrLotties(Index:Int){
-        if arrItemCarousel.isEmpty{
-            print("El arreglo de imágenes está vacio")
-        }else{
-            print(arrItemCarousel[Index])
+        if !arrItemCarousel.isEmpty{
             for nameAnimation in arrItemCarousel[Index]{
                 
                 animationsLotties = .init(name: nameAnimation)
@@ -104,11 +93,6 @@ class WelcomeController: UIViewController, iCarouselDataSource {
         
         imageView.contentMode = .scaleAspectFit
         print(index)
-
-        //loadArrLotties(Index: index)
-        //for i in arrItemCarousel[index]{
-        //    imageView.image = UIImage(named: i)
-        //}
         
         return view
     }

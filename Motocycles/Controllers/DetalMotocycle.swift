@@ -16,6 +16,8 @@ class DetalMotocycle: UIViewController, UICollectionViewDelegate, UICollectionVi
     //MARK: - Properties
     var delegate:DataMotocicle?
     var data:[Any]?
+    
+    //Motocycles
     var fernando:Motocycle = Motocycle.init(nombre: "Fernando", apellido: "González", estado: true)
     var fernando1:Motocycle = Motocycle.init(nombre: "Fer", apellido: "González", estado: true)
     var fer: Motocycle = Motocycle.init(nombre: "Fercho", apellido: "González", estado: true)
@@ -29,9 +31,9 @@ class DetalMotocycle: UIViewController, UICollectionViewDelegate, UICollectionVi
     var diana = Motocycle.init(nombre: "Diana", apellido: "Dominguez", estado: true)
     
     
-    var arrPersons:[[Any]]?
+    var arrPersons:[Motocycle]?
     var arrData = [Any]()
-    var availableMotocycle = 0
+    var availableMotocycle = 8
     
     //MARK: - Cicle Life Screen
     override func viewDidLoad() {
@@ -41,7 +43,7 @@ class DetalMotocycle: UIViewController, UICollectionViewDelegate, UICollectionVi
         navigationController?.navigationBar.isHidden = true
         configureCollection()
         recoveryInfo()
-        //changeValueFer()
+        
         configureBtn()
     }
     
@@ -58,42 +60,10 @@ class DetalMotocycle: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func recoveryInfo(){
-        
-        arrPersons = [[fer], [fernando], [fernando1]]
-        
-        arrData = [
-            [fer.nombre!, fer.estado!],
-            [fernando.nombre!, fernando.estado!],
-            [fernando1.nombre!, fernando1.estado!]
-            //[alfredo.nombre!, alfredo.estado!],
-            //[anastacio.nombre!, anastacio.estado!],
-            //[brenda.nombre!, brenda.estado!],
-            //[anayeli.nombre!, anayeli.estado!],
-            //[angelica.nombre!, angelica.estado!],
-            //[cristian.nombre!, cristian.estado!],
-            //[carlos.nombre!, carlos.estado!],
-            //[diana.nombre!, diana.estado!]
-            
+        arrPersons = [fer, fernando, fernando1, alfredo,
+                      anastacio, brenda, anayeli, angelica,
+                      cristian, carlos, diana
         ]
-        
-        /*if let ferP = fer.nombre{
-            arrData.append([ferP, fer.estado!])
-            
-        }
-        
-        if let fer = fernando.nombre{
-            arrData.append([fer, fernando.estado!])
-        }
-        
-        if let fer = fernando1.nombre{
-            arrData.append([fer, fernando1.estado!])
-        }
-        */
-        
-        
-        //print(arrData)
-        //print(arrPersons)
-        //statusItem(index: 0)
     }
     
     // MARK: - CollectionView
@@ -103,16 +73,14 @@ class DetalMotocycle: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return arrData.count
+        return arrPersons!.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let index = indexPath.row
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: itemMotocycle.idItem, for: indexPath) as! itemMotocycle
-        
-        
-        
-        cell.configureItem(data: arrData[index] as! [Any])
+ 
+        cell.configureItem(data: arrPersons![index])
         
         return cell
     }
@@ -121,87 +89,26 @@ class DetalMotocycle: UIViewController, UICollectionViewDelegate, UICollectionVi
         let index = indexPath.row
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: itemMotocycle.idItem, for: indexPath) as! itemMotocycle
         
-        /*var data = arrData[index] as! [Any]
         
-        if data[1] as! Bool == true{
-            print("1", data[1])
-            data[1] = false
-            print(data[1])
-            recoveryInfo()
-            collectionView.reloadData()
-        }else if data[1] as! Bool == false{
-            print("2",data[1])
-            data[1] = true
-            recoveryInfo()
-            collectionView.reloadData()
-        }else{
-            print("Error")
-        }*/
+        let person = arrPersons![index]
+        cell.configureItem(data: person)
         
-        //print(arrPersons!)
-
-        
-        //print(status)
-        
-        
-        let data = arrData[index] as! [Any]
-        
-        if "\(data[0])" == "Fercho"{
-            changeValueFer()
-        }else if "\(data[0])" == "Fernando"{
-            changeValueFernando()
-        }else if "\(data[0])" == "Fer"{
-            changeValueFernando1()
-        }
-        
-
-        cell.changeColorBG(status: data[1] as! Bool)
-        
+        changeStatus(namePerson: person)
         collectionView.reloadData()
 
     }
     
-    func changeValueFer(){
-        if fer.estado == true{
-            fer.estado = false
-            availableMotocycle += 1
-        }else{
-            fer.estado = true
-            availableMotocycle -= 1
-        }
-        
+    func changeStatus(namePerson:Motocycle){
+        namePerson.estado = !namePerson.estado
+        (namePerson.estado) ? (availableMotocycle += 1) : (availableMotocycle -= 1)
         recoveryInfo()
-    }
-    
-    func changeValueFernando(){
-        if fernando.estado == true{
-            fernando.estado = false
-            availableMotocycle += 1
-        }else{
-            fernando.estado = true
-            availableMotocycle -= 1
-        }
-        
-        recoveryInfo()
-    }
-    
-    func changeValueFernando1(){
-        if fernando1.estado == true{
-            fernando1.estado = false
-            availableMotocycle += 1
-        }else{
-            fernando1.estado = true
-            availableMotocycle -= 1
-        }
-        
-        recoveryInfo()
-
     }
     
     func recoveryDataMotocicle(){
-        print(availableMotocycle)
+        
+        print("aailable: ---",availableMotocycle)
         if availableMotocycle != 0{
-            print("difernete de 0")
+            print("Diferente de 0")
         }
         delegate?.countMotocicle([availableMotocycle, data!])
         navigationController?.popViewController(animated: true)

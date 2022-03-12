@@ -26,13 +26,13 @@
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="YNO-k3-Fav">
                         <rect key="frame" x="20" y="420" width="371" height="147"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Tecnhology G" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91c-yd-jSL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Tecnhology G" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91c-yd-jSL">
                                 <rect key="frame" x="0.0" y="0.0" width="371" height="82"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="This is a very creative bussines of technology, biology, trading, etc" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cz-Zx-thz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a very creative bussines of technology, biology, trading, etc" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cz-Zx-thz">
                                 <rect key="frame" x="0.0" y="106" width="361" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -41,7 +41,6 @@
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="6cz-Zx-thz" secondAttribute="trailing" constant="10" id="4Nt-X0-86Y"/>
-                            <constraint firstItem="6cz-Zx-thz" firstAttribute="leading" secondItem="YNO-k3-Fav" secondAttribute="leading" constant="10" id="DUM-lr-O6m"/>
                             <constraint firstItem="91c-yd-jSL" firstAttribute="leading" secondItem="YNO-k3-Fav" secondAttribute="leading" id="JEC-is-uf5"/>
                             <constraint firstAttribute="trailing" secondItem="91c-yd-jSL" secondAttribute="trailing" id="aOJ-9N-m3S"/>
                         </constraints>

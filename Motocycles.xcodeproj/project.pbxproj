@@ -37,7 +37,6 @@
 		C1FFA1312787996900921A47 /* loadingCircles.json in Resources */ = {isa = PBXBuildFile; fileRef = C1FFA12C2787996900921A47 /* loadingCircles.json */; };
 		C1FFA1322787996900921A47 /* addlandHeatfavV2.json in Resources */ = {isa = PBXBuildFile; fileRef = C1FFA12D2787996900921A47 /* addlandHeatfavV2.json */; };
 		C1FFA1362788C88100921A47 /* modelAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FFA1352788C88100921A47 /* modelAnimations.swift */; };
-		C1FFA1392788D13100921A47 /* FunctionsAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FFA1382788D13100921A47 /* FunctionsAnimations.swift */; };
 		C1FFA13D2788E85800921A47 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FFA13C2788E85800921A47 /* LaunchScreen.swift */; };
 		C1FFA1412789712F00921A47 /* itemHorario.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FFA13F2789712F00921A47 /* itemHorario.swift */; };
 		C1FFA1422789712F00921A47 /* itemHorario.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1FFA1402789712F00921A47 /* itemHorario.xib */; };
@@ -78,7 +77,6 @@
 		C1FFA12C2787996900921A47 /* loadingCircles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loadingCircles.json; sourceTree = "<group>"; };
 		C1FFA12D2787996900921A47 /* addlandHeatfavV2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = addlandHeatfavV2.json; sourceTree = "<group>"; };
 		C1FFA1352788C88100921A47 /* modelAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modelAnimations.swift; sourceTree = "<group>"; };
-		C1FFA1382788D13100921A47 /* FunctionsAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionsAnimations.swift; sourceTree = "<group>"; };
 		C1FFA13C2788E85800921A47 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		C1FFA13F2789712F00921A47 /* itemHorario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemHorario.swift; sourceTree = "<group>"; };
 		C1FFA1402789712F00921A47 /* itemHorario.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = itemHorario.xib; sourceTree = "<group>"; };
@@ -113,39 +111,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		C1534BD727968D5C00806579 /* Onboarding */ = {
-			isa = PBXGroup;
-			children = (
-				C1534BDF2796990000806579 /* CollectionView */,
-				C1534BD827968DA400806579 /* OnboardingView.swift */,
-			);
-			path = Onboarding;
-			sourceTree = "<group>";
-		};
-		C1534BDA2796941000806579 /* ModelOnboarding */ = {
-			isa = PBXGroup;
-			children = (
-				C1534BDB2796942F00806579 /* ModelOnboarding.swift */,
-			);
-			path = ModelOnboarding;
-			sourceTree = "<group>";
-		};
-		C1534BDF2796990000806579 /* CollectionView */ = {
-			isa = PBXGroup;
-			children = (
-				C1534BE12797506A00806579 /* OnboardingCollectionViewCell.swift */,
-			);
-			path = CollectionView;
-			sourceTree = "<group>";
-		};
-		C1534BE02797504400806579 /* Onboarding */ = {
-			isa = PBXGroup;
-			children = (
-				C1534BE22797506A00806579 /* OnboardingCollectionViewCell.xib */,
-			);
-			path = Onboarding;
-			sourceTree = "<group>";
-		};
 		C1534BE52797C0CF00806579 /* Adapters */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,98 +127,12 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
-		C16F332C278A1CB100055FCC /* ModelMotocycles */ = {
-			isa = PBXGroup;
-			children = (
-				C16F332D278A1CF200055FCC /* ModelMotocycles.swift */,
-			);
-			path = ModelMotocycles;
-			sourceTree = "<group>";
-		};
-		C16F332F278A1ECF00055FCC /* ControllerDetailMotocycles */ = {
-			isa = PBXGroup;
-			children = (
-				C16F3330278A1F1000055FCC /* DetalMotocycle.swift */,
-			);
-			path = ControllerDetailMotocycles;
-			sourceTree = "<group>";
-		};
 		C16F3332278A1FA000055FCC /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				C16F3333278A1FC100055FCC /* protocolMotocycle.swift */,
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		C16F3335278A347B00055FCC /* CollectionMotocycles */ = {
-			isa = PBXGroup;
-			children = (
-				C16F3337278A34B100055FCC /* itemMotocycle.xib */,
-			);
-			path = CollectionMotocycles;
-			sourceTree = "<group>";
-		};
-		C16F333A278A34D600055FCC /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				C1FFA1182787929B00921A47 /* ViewController.swift */,
-				C1FFA13C2788E85800921A47 /* LaunchScreen.swift */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		C16F333B278A34F000055FCC /* Delegate */ = {
-			isa = PBXGroup;
-			children = (
-				C1FFA1142787929B00921A47 /* AppDelegate.swift */,
-				C1FFA1162787929B00921A47 /* SceneDelegate.swift */,
-			);
-			path = Delegate;
-			sourceTree = "<group>";
-		};
-		C16F333C278A350900055FCC /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				C1FFA11A2787929B00921A47 /* Main.storyboard */,
-				C1FFA11F2787929B00921A47 /* LaunchScreen.storyboard */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		C1D4E89B2790D4F900C6C5BB /* Welcome */ = {
-			isa = PBXGroup;
-			children = (
-				C1D4E89C2790D52B00C6C5BB /* WelcomeController.swift */,
-			);
-			path = Welcome;
-			sourceTree = "<group>";
-		};
-		C1D4E89E2790DAFA00C6C5BB /* itemMotocycles */ = {
-			isa = PBXGroup;
-			children = (
-				C16F333D278A35C200055FCC /* itemMotocycle.swift */,
-			);
-			path = itemMotocycles;
-			sourceTree = "<group>";
-		};
-		C1D4E8A727937CDB00C6C5BB /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				C1534BDA2796941000806579 /* ModelOnboarding */,
-				C1D4E8A827937D2F00C6C5BB /* ModelWelcomeLotties */,
-				C1FFA1342788C84D00921A47 /* ModelAnimation */,
-				C16F332C278A1CB100055FCC /* ModelMotocycles */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		C1D4E8A827937D2F00C6C5BB /* ModelWelcomeLotties */ = {
-			isa = PBXGroup;
-			children = (
-				C1D4E8A927937D5F00C6C5BB /* ModelWelcomeLotties.swift */,
-			);
-			path = ModelWelcomeLotties;
 			sourceTree = "<group>";
 		};
 		C1FFA1082787929B00921A47 = {
@@ -277,6 +156,11 @@
 		C1FFA1132787929B00921A47 /* Motocycles */ = {
 			isa = PBXGroup;
 			children = (
+				C1FFA1142787929B00921A47 /* AppDelegate.swift */,
+				C1FFA1162787929B00921A47 /* SceneDelegate.swift */,
+				C1FFA11D2787929B00921A47 /* Assets.xcassets */,
+				C16F3332278A1FA000055FCC /* Protocols */,
+				C1FFA1282787994F00921A47 /* Assets */,
 				C1534BE52797C0CF00806579 /* Adapters */,
 				C1FFA1332788C84200921A47 /* Models */,
 				C1FFA13B2788E81700921A47 /* Views */,
@@ -294,7 +178,6 @@
 				C1D4E8A52790E34C00C6C5BB /* voodoobikersMotorcycle.json */,
 				C1D4E8A02790E34100C6C5BB /* motorcycleLoading.json */,
 				C1D4E8A12790E34100C6C5BB /* particleWave.json */,
-				C1FFA11D2787929B00921A47 /* Assets.xcassets */,
 				C1FFA1292787996900921A47 /* 404ErrorAnimation.json */,
 				C1FFA12D2787996900921A47 /* addlandHeatfavV2.json */,
 				C1FFA12B2787996900921A47 /* graphDiagramAnimation.json */,
@@ -307,40 +190,25 @@
 		C1FFA1332788C84200921A47 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C1D4E8A727937CDB00C6C5BB /* Models */,
-				C16F3332278A1FA000055FCC /* Protocols */,
-				C1FFA1282787994F00921A47 /* Assets */,
+				C1534BDB2796942F00806579 /* ModelOnboarding.swift */,
+				C1D4E8A927937D5F00C6C5BB /* ModelWelcomeLotties.swift */,
+				C1FFA1352788C88100921A47 /* modelAnimations.swift */,
+				C16F332D278A1CF200055FCC /* ModelMotocycles.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		C1FFA1342788C84D00921A47 /* ModelAnimation */ = {
-			isa = PBXGroup;
-			children = (
-				C1FFA1352788C88100921A47 /* modelAnimations.swift */,
-			);
-			path = ModelAnimation;
-			sourceTree = "<group>";
-		};
-		C1FFA1372788D0EF00921A47 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				C1FFA1382788D13100921A47 /* FunctionsAnimations.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		C1FFA13A2788E7FF00921A47 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C1534BD727968D5C00806579 /* Onboarding */,
-				C1D4E89E2790DAFA00C6C5BB /* itemMotocycles */,
-				C16F333B278A34F000055FCC /* Delegate */,
-				C1D4E89B2790D4F900C6C5BB /* Welcome */,
-				C16F333A278A34D600055FCC /* Main */,
-				C16F332F278A1ECF00055FCC /* ControllerDetailMotocycles */,
-				C1FFA1432789713A00921A47 /* itemHorarios */,
-				C1FFA1372788D0EF00921A47 /* Extensions */,
+				C1534BE12797506A00806579 /* OnboardingCollectionViewCell.swift */,
+				C1534BD827968DA400806579 /* OnboardingView.swift */,
+				C16F333D278A35C200055FCC /* itemMotocycle.swift */,
+				C1D4E89C2790D52B00C6C5BB /* WelcomeController.swift */,
+				C1FFA1182787929B00921A47 /* ViewController.swift */,
+				C1FFA13C2788E85800921A47 /* LaunchScreen.swift */,
+				C16F3330278A1F1000055FCC /* DetalMotocycle.swift */,
+				C1FFA13F2789712F00921A47 /* itemHorario.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -348,28 +216,13 @@
 		C1FFA13B2788E81700921A47 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C1534BE02797504400806579 /* Onboarding */,
-				C16F333C278A350900055FCC /* Main */,
-				C16F3335278A347B00055FCC /* CollectionMotocycles */,
-				C1FFA13E278970F100921A47 /* TableHorarios */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		C1FFA13E278970F100921A47 /* TableHorarios */ = {
-			isa = PBXGroup;
-			children = (
+				C1534BE22797506A00806579 /* OnboardingCollectionViewCell.xib */,
+				C1FFA11A2787929B00921A47 /* Main.storyboard */,
+				C1FFA11F2787929B00921A47 /* LaunchScreen.storyboard */,
+				C16F3337278A34B100055FCC /* itemMotocycle.xib */,
 				C1FFA1402789712F00921A47 /* itemHorario.xib */,
 			);
-			path = TableHorarios;
-			sourceTree = "<group>";
-		};
-		C1FFA1432789713A00921A47 /* itemHorarios */ = {
-			isa = PBXGroup;
-			children = (
-				C1FFA13F2789712F00921A47 /* itemHorario.swift */,
-			);
-			path = itemHorarios;
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -505,7 +358,6 @@
 				C1FFA1362788C88100921A47 /* modelAnimations.swift in Sources */,
 				C1534BE32797506A00806579 /* OnboardingCollectionViewCell.swift in Sources */,
 				C16F333E278A35C200055FCC /* itemMotocycle.swift in Sources */,
-				C1FFA1392788D13100921A47 /* FunctionsAnimations.swift in Sources */,
 				C16F332E278A1CF200055FCC /* ModelMotocycles.swift in Sources */,
 				C1D4E89D2790D52B00C6C5BB /* WelcomeController.swift in Sources */,
 				C16F3334278A1FC100055FCC /* protocolMotocycle.swift in Sources */,

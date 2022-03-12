@@ -27,18 +27,14 @@ class itemMotocycle: UICollectionViewCell {
     }
 
     //MARK: - Configure
-    func configureItem(data:[Any]){
-        lblName.text = "\(data[0])"
+    func configureItem(data:Motocycle){
+        lblName.text = data.nombre.description
         imgProfile.image = UIImage(systemName: "bolt.car.fill")
-        changeColorBG(status:data[1] as! Bool)
+        changeColorBG(status:data.estado)
     }
     
     func changeColorBG(status:Bool){
-        if status == true{
-            viewBG.backgroundColor = UIColor.green
-        }else{
-            viewBG.backgroundColor = UIColor.red
-        }
-        
+        (status == true) ?
+        (viewBG.backgroundColor = UIColor.green):(viewBG.backgroundColor = UIColor.red)
     }
 }
